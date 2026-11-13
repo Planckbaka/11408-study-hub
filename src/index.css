@@ -1,0 +1,164 @@
+@import 'katex/dist/katex.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 99%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221 83% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 95%;
+    --secondary-foreground: 222 47% 15%;
+    --muted: 214 25% 95%;
+    --muted-foreground: 215 16% 44%;
+    --accent: 214 32% 94%;
+    --accent-foreground: 222 47% 12%;
+    --destructive: 0 78% 54%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 22% 88%;
+    --input: 214 22% 86%;
+    --ring: 221 83% 48%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 222 36% 7%;
+    --foreground: 210 30% 94%;
+    --card: 222 32% 10%;
+    --card-foreground: 210 30% 94%;
+    --popover: 222 32% 10%;
+    --popover-foreground: 210 30% 94%;
+    --primary: 213 94% 62%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 220 26% 15%;
+    --secondary-foreground: 210 30% 92%;
+    --muted: 220 26% 15%;
+    --muted-foreground: 215 18% 64%;
+    --accent: 220 26% 17%;
+    --accent-foreground: 210 30% 94%;
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 219 24% 19%;
+    --input: 219 24% 20%;
+    --ring: 213 94% 62%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+/* KaTeX layout safety */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.25rem;
+  margin: 0.75rem 0;
+}
+
+.katex {
+  font-size: 1.02em;
+}
+
+/* Syntax Highlighting (Dual Theme via CSS variables) */
+.hljs {
+  color: hsl(222 47% 16%);
+  background: transparent;
+}
+.dark .hljs {
+  color: hsl(210 30% 90%);
+}
+.hljs-comment,
+.hljs-quote {
+  color: hsl(215 16% 47%);
+  font-style: italic;
+}
+.dark .hljs-comment,
+.dark .hljs-quote {
+  color: hsl(215 18% 56%);
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: hsl(262 72% 48%);
+  font-weight: 600;
+}
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-subst {
+  color: hsl(265 88% 76%);
+}
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: hsl(24 85% 44%);
+}
+.dark .hljs-number,
+.dark .hljs-literal,
+.dark .hljs-variable,
+.dark .hljs-template-variable,
+.dark .hljs-tag .hljs-attr {
+  color: hsl(32 95% 68%);
+}
+.hljs-string,
+.hljs-doctag {
+  color: hsl(146 66% 32%);
+}
+.dark .hljs-string,
+.dark .hljs-doctag {
+  color: hsl(142 70% 64%);
+}
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: hsl(221 83% 46%);
+  font-weight: 600;
+}
+.dark .hljs-title,
+.dark .hljs-section,
+.dark .hljs-selector-id {
+  color: hsl(210 95% 70%);
+}
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-built_in {
+  color: hsl(199 84% 36%);
+}
+.dark .hljs-type,
+.dark .hljs-class .hljs-title,
+.dark .hljs-built_in {
+  color: hsl(196 86% 68%);
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.45);
+}

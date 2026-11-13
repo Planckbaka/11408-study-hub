@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN" suppressHydrationWarning>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="11408 (408 计算机学科专业基础综合) 考研备考知识库、真题频次分析与交互式刷题工作台"
+    />
+    <title>11408 Study Hub · 408 考研知识库与刷题工作台</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('11408-hub-theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved === 'light' || saved === 'dark' ? saved : prefersDark ? 'dark' : 'light';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-background text-foreground antialiased selection:bg-primary/15 selection:text-primary">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
