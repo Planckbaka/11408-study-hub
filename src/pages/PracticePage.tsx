@@ -826,18 +826,12 @@ export const PracticePage: React.FC = () => {
                 </div>
                 <div className="space-y-1.5">
                   <h3 className="text-base font-semibold">
-                    {wrongOnly
-                      ? '错题重练队列为空'
-                      : subjectFilter !== 'ALL' && subjectFilter !== 'CO'
-                        ? `${SUBJECT_META[subjectFilter].name}（${subjectFilter}）习题库待社区扩展`
-                        : '当前筛选条件下暂无匹配题目'}
+                    {wrongOnly ? '错题重练队列为空' : '当前筛选条件下暂无匹配题目'}
                   </h3>
                   <p className="max-w-md text-sm text-muted-foreground">
                     {wrongOnly
                       ? '你当前还没有待复习的错题（或在筛选条件下无错题）。可在做题时手动收入错题本，或前往错题本导入备份。'
-                      : subjectFilter !== 'ALL' && subjectFilter !== 'CO'
-                        ? `v1.0 已率先贯通计算机组成原理（CO）全部 7 章共 ${ALL_QUESTIONS.length} 道精选单选与压轴大题；其余科目可在 src/data/questions/ 按同构 Schema 扩展。`
-                        : '尝试放宽章节、来源、难度筛选或清空关键词搜索。'}
+                      : '尝试放宽章节、来源、难度筛选或清空关键词搜索。'}
                   </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2">

@@ -655,7 +655,7 @@ export const NoteReaderPage: React.FC = () => {
                   <span>考纲骨架与备考扩展工作台</span>
                 </div>
                 <p className="text-xs leading-relaxed text-muted-foreground">
-                  当前 v1.0 已打通计组（CO）全 7 章完整精讲与习题；本章节（{subj.name} · {chapter.id}）已内置官方考纲条目、高频重难点、踩坑清单与原子考点打卡，支持按统一规范随时扩展精讲全稿与题库。
+                  本章节（{subj.name} · {chapter.id}）已内置官方考纲条目、高频重难点、踩坑清单与原子考点打卡，支持按统一规范随时扩充或覆写精讲全稿与题库。
                 </p>
               </div>
               <Button size="sm" variant="outline" asChild className="shrink-0">

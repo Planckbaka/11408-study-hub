@@ -96,14 +96,14 @@ export const DashboardPage: React.FC = () => {
                 <span>2027 考研 11408 开源备考工作台</span>
               </Badge>
               <Badge variant="outline" className="font-mono text-xs">
-                CO 计组 7 章精讲 + {ALL_QUESTIONS.length} 题全贯通
+                四科 26 章全精讲 + {ALL_QUESTIONS.length} 题全贯通
               </Badge>
             </div>
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               四科考纲全景矩阵与交互式备考控制台
             </h1>
             <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              紧扣 408 全考纲与 2009–2026 十八年真题考点热力统计，整合公式推导、Mermaid 硬件通路图、王道同源/易错变式题库与本地持久化错题本。
+              紧扣 11408 四科考纲与 2009–2026 真题命题规律，整合 DS/CO/OS/CN 全 26 章精讲、KaTeX 公式与 Mermaid 图谱、王道模拟/真题同源/跨科变式题库及本地错题本。
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export const DashboardPage: React.FC = () => {
           </CardHeader>
           <CardContent className="space-y-2">
             <Progress value={(completedChaptersCount / totalChapters) * 100} />
-            <p className="text-xs text-muted-foreground">包含 CO 7 章精讲 + DS/OS/CN 19 章骨架</p>
+            <p className="text-xs text-muted-foreground">覆盖 DS(8) / CO(7) / OS(5) / CN(6) 全 26 章精讲</p>
           </CardContent>
         </Card>
 
